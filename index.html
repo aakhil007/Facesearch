@@ -2,17 +2,18 @@
 <!-- saved from url=(0039)https://aakhil007.github.io/facesearch/ -->
 <html class="gr__aakhil007_github_io"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<style type="text/css">
-			body{font-family: sans-serif;}
+			body{font-family: 'Roboto',sans-serif;line-height: 1.45em;text-align: justify;} 
 			p{display: inline-block;}
 			img{display: block;}
-			.container{width: 90%;position absolute;margin: auto;}
-			.title{position: relative;width: 90%;margin: auto;text-align: center;font-weight: bold;font-size: 18px;padding: 1%;}
+			.container{width: 90%;margin: auto;}
+			.title{position: relative;width: 90%;margin: auto;text-align: center;font-weight: 700;font-size: 28px;padding: 3%;}
 			.section{position: relative;width: 90%;margin: auto;padding: 2%;}
-			.subsection{position: relative; width: 98%;text-align: justify;padding: 10px;}
-			.heading{position: relative; width: 98%;text-align: left;font-size: 14px;font-weight: bold;}
-			.text{width: 95%;font-size: 12px;text-align: justify;padding: 10px 0px 10px 0px;}
-			.authors{position: relative;width: 80%;margin: auto;padding: 2%;font-style: italic;text-align: center;font-size: 12px;}
+			.subsection{position: relative; width: 90%;margin: auto;text-align: justify;padding: 10px;}
+			.heading{position: relative; width: 98%;text-align: left;font-size: 16px;font-weight: 500;}
+			.text{width: 95%;font-size: 14px;text-align: justify;padding: 10px 0px 10px 0px;}
+			.authors{position: relative;width: 80%;margin: auto;padding: 0%;text-align: center;font-size: 14px;}
 			.image{width: 95%;font-size: 12px;text-align: left;}
+			#akhi{font-weight: 500;}
 		</style> <link rel="shortcut icon" href="bb.png">
 	<style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
 .en-markup-crop-options {
@@ -27,7 +28,9 @@
 .en-markup-crop-options div div:first-of-type {
     margin-left: 0px !important;
 }
-</style></head>
+</style>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+</head>
 	<body data-gr-c-s-loaded="true">
 		<div class="container">
 			<div class="title">FACE SEARCH</div>
@@ -35,10 +38,10 @@
 			<div class="authors">
 
 				<!-- Start edit here  -->
-				<p>AAKHIL SHAIK, Roll No.: 150102061, Branch: ECE</p>; &nbsp; &nbsp;
-				<p>MOHAN VAMSI, Roll No.: 150102080, Branch: ECE</p>; &nbsp; &nbsp;
-				<p>RUTHVIK, Roll No.: 150102072, Branch: ECE</p>; &nbsp; &nbsp;
-				<p>DEEKSHITA, Roll No.: 150102017, Branch: ECE</p>; &nbsp; &nbsp;
+				<p>Mohan Vamsi,  150102080,  ECE</p>; &nbsp; &nbsp;
+				<p>Aakhil Shaik, 150102061,  ECE</p>; &nbsp; &nbsp;
+				<p>Ruthvik Ramaswamy,  150102072,  ECE</p>; &nbsp; &nbsp;
+				<p>Deekshita, 150102017, ECE</p>; &nbsp; &nbsp;
 				
 				<!-- Stop edit here -->
 
@@ -46,23 +49,23 @@
 
 
 			<div class="section">
-				<div class="heading">Abstract</div>
+				<div class="heading" id="abs">Abstract</div>
 				<div class="text">
 
 					<!-- Start edit here  -->
-					Videos are composed of a large number of frames. In this project, we worked on the videos with frames of human figures with an aim to find the track period wherein a particular given face shows up. 'Face Detection Algorithm' is used to track faces from the various frames of the video, which were later re-scaled. The faces were clustered using spherical k-means clustering. The faces in the dataset were further hashed and analysed to find the matches to the given face.
+					Videos are composed of a large number of frames. In this project, we worked on the videos with frames of human figures with an aim to find the human participants and to store the frames from the video in which the each participant shows up separately. Dlib library was used to track down the faces from each frame. Different tracks were used for different faces as the frame changes and the information obtained is stored track by track. 'Face Detection Algorithm' is used to detect faces from the various tracks and omit the tracks with no faces. The detected faces are later re-scaled and clustered using spherical k-means clustering. The faces in the dataset are further hashed which reduced the dataset size considerably.
+
 					<!-- Stop edit here -->
 						
 					</div>
 			</div>
 
 			<div class="section">
-				<div class="heading">1. Introduction</div>
+				<div class="heading" id="intro">1. Introduction</div>
 				<div class="text">
 
 					<!-- Start edit here  -->
-					Videos with human figures are at present the most popular type, considering the large number of films, TV series, etc that are produced in the world today. Therefore, indexing the videos by the faces could be really proved useful. For example, when the timestamps of a particular person are required from long videos, the indexes could be used to track them down. 
-
+					Today, the scope for fame through multimedia is at its peaks.  Videos with human figures are at present the most popular type, considering the large number of films, TV series, etc that are produced in the world today.  The number of popular faces is exponentially increasing. Any web page shows with hundreds of pages in response to a comprehensive query. Therefore, indexing the data (here videos) helps one to easily identify the relevant output. Also, when the timestamps of a particular person are required from long videos, the indexes could be used to track them down.
 					<!-- Stop edit here -->
 
 				</div>
@@ -72,7 +75,8 @@
 					<div class="text">
 
 						<!-- Start edit here  -->
-						Videos with human figures are at present the most popular type, considering the large number of films, TV series, etc that are produced in the world today. Therefore, indexing the videos by the faces could be really proved useful. For example, when the timestamps of a particular person are required from long videos, the indexes could be used to track them down.
+						In our attempt to index videos, it is crucial to be able to detect all the faces that appear in the video correctly and perform clustering optimally. Features that relate tracks of the same face but different orientation are critical to such a code otherwise it will be a failed attempt to group frames of the same person together. Also, detection of all the faces and rejection of frames with no sign of human figure is important for efficient functioning.
+
 						<!-- Stop edit here -->
 
 					</div>
@@ -84,7 +88,7 @@
 
 						<!-- Start edit here  -->
 						
-						<img src="blo.png" alt="This text displays when the image is umavailable" width="500px" height="">
+						<img src="./images/blo.png" alt="This text displays when the image is umavailable" width="500px" height="">
 						<!-- Stop edit here -->
 
 					</div>
@@ -94,52 +98,136 @@
 					<div class="text">
 
 						<!-- Start edit here  -->
-						To be updated.
+						A semi-supervised method for building large, labeled datasets of faces by leveraging archival video was first proposed by Ramanan, D., Baker, S., Kakade, S.: Leveraging. Here, they exploited the fact that characters tend to wear consistent clothing during a scene, and used body appearance as a strong cue for matching across shot changes. Agglomerative hierarchical clustering was then used to combine the tracks.
+<br> <br>
+Shi zong, in his publication, mentioned ways to significantly improve the clustering quality for k-means, yet to retain its efficiency. His focus was mainly on achieving non-empty balanced clusters. He used the online spherical k means that updates cluster centroids following the gradient direction. 
+
 						<!-- Stop edit here -->
 
 					</div>
 				</div>
 				<div class="subsection">
-					<div class="heading">1.4 Proposed Approach</div>
+					<div class="heading">1.4 Proposed Approach</div> <br>
+<div class="image">
+
+						<!-- Start edit here  -->
+						
+						<img src="./images/1.png" alt="This text displays when the image is unavailable" width="100%" height="auto"> <br>
+						<!-- Stop edit here -->
+
+					</div>
+
 					<div class="text">
 
 						<!-- Start edit here  -->
-						Describe your approach briefly here.
+						Our main aim, given a video, is to extract all the different human participants from the video and store separately all their frames from the video. The various frames from the video are first extracted and converted to black and white frames. All the different tracks from the frames is subjected to Face detection algorithm to detect the faces out of the tracks and also to eliminate the tracks without any faces. The faces are then resized to 64 x 64 size image and the 2D array of pixel values is converted to a row major order. Spherical k-means clustering is then used to group the images in the dataset which leaves us with k mean vectors which are later converted to unit vectors. The faces in the dataset which are so far represented by a 64 x 64 matrix are hashed using the mean vectors which results in a k dimensional vector representation for each face. 
+Clustering is an important technique for unsupervised document organization, automatic topic extraction, and fast information retrieval or filtering. Although, we have also tried using a substitution for it - Gaussian Mixture Model and compared the results of both the methods.
+
 						<!-- Stop edit here -->
 
 					</div>
 				</div>
-				<div class="subsection">
+			<div class="subsection">
 					<div class="heading">1.5 Report Organization</div>
 					<div class="text">
 
 						<!-- Start edit here  -->
-						To be updated.
+						The report is organized as follows, <br>
+						1. Title and Authors.<sup><a href="#top">[Top]</a></sup> <br>
+						2. Abstract.<sup><a href="#abs">[0]</a></sup> <br>
+						3. Introduction to Problem.<sup><a href="#intro">[1]</a></sup> <br>
+						4. Proposed Approach.<sup><a href="#theory">[2]</a></sup> <br>
+						5. Experimental Results, Project Code and Discussions.<sup><a href="#results">[3]</a></sup> <br>
+						6. Conclusions and Summary.<sup><a href="#summary">[4]</a></sup> <br>
+						7. References.<sup><a href="#1">[5]</a></sup>  <br>
+						The above order is followed to ensure every finding of us is properly documented.
 						<!-- Stop edit here -->
 
 					</div>
 				</div>
-			</div>
 
 			<div class="section">
-				<div class="heading">2. Proposed Approach</div>
-				<div class="text">
+				<div class="heading" id="theory">2. Proposed Approach</div>
+				<div class="subsection">
+					<div class="heading">2.1 Face Tracking and Detecting:</div>
+					<div class="text">
 
-					<!-- Start edit here  -->
-					To be updated.
+						<!-- Start edit here  -->
+						
+					We took a video as an input and the correlation tracker and the detector were both enabled. Initially our detector detected the number of faces in one frame and initialized the same number of trackers. After each frame, each tracker compared its current position with its previous position and gave us a confidence value. If the confidence was greater than the threshold which was decided by us, it kept tracking the same face. If the confidence was less than our threshold, the tracker stopped tracking. While tracking, after every 10 frames, we used the detector to detect for any new faces in that frame. We decided the face as a new one by checking its centroid presence in the tracked regions of tracker. We initialized the tracker for all the newly detected faces. By the end of processing of each frame, each face tracked by tracker was verified whether it is a face or not. If it was a face we converted that into a black and white image and resized that into 64 x 64 dimension.We then converted this 64*64 row major matrix into a one dimensional array and stored it in a CSV file.
+					<br><br>
+					<div class="image">
+
+					<!-- Start edit here  -->						
+					<img src="./images/lol.gif" alt="This text displays when the image is unavailable" width="100%" height="auto"> <br>
 					<!-- Stop edit here -->
 
+					</div>
+						<!-- Stop edit here -->
+
+					</div>
 				</div>
+
+ 				<div class="subsection">
+					<div class="heading">2.2 Spherical K-Means Clustering:</div>
+					<div class="text">
+
+					The Spherical K-means algorithm, i.e., the K-means algorithm with cosine similarity, is a popular method for clustering high-dimensional text data. In this algorithm, each vector as well as each cluster mean is represented as a high-dimensional unit-length vector. That is, each cluster mean vector is updated, only after all document vectors being assigned, as the (normalized) average of all the document vectors assigned to that cluster. It is very useful in clustering of large data sets. 
+
+						The basic methodology here is, firstly, we found the mean of whole data set and updated the whole data set by subtracting it from every vector. This differentiated each vector making closer ones go farther, and farther ones come. We then converted each data into a unit vector, assigned certain levels to each data set and found the mean vector of the respective levels. We later converted them into unit vectors too.
+
+						 A list is created which stores the vector indices present in the given cluster.  This marks completion of one iteration.  Dot product of each unit vector with every level means is calculated and the cluster mean which gets the maximum dot product stores the vector i.e. the list storing the indices is updated. New means of the updated clusters are calculated and are converted to unit mean vectors. Dot products of the new unit mean vectors and the previous unit mean vectors are calculated. If dot product values of all mean vectors are greater than threshold (In our code we used 0.99 as threshold), the process is terminated, else the next iteration starts and the whole process repeats. 
+					<br><br>
+					<div class="image" style="margin: auto;width: 90%">
+
+					<!-- Start edit here  -->						
+					<img src="./images/22.jpg" alt="This text displays when the image is unavailable" width="60%" height="auto"> <br>
+					<!-- Stop edit here -->
+
+					</div>
+						<!-- Stop edit here -->
+
+					</div>
+				</div>
+
+
+				<div class="subsection">
+					<div class="heading">2.3 Hashing:</div>
+					<div class="text">
+ Hashing is the transformation of a vector into a usually shorter fixed-length value or key that represents the original vector. Hashing is used to index and retrieve items in a database because it is faster to find the item using the shorter hashed key than to find it using the original value. It is also used in many encryption algorithms. Here, we find the projection of the given vector on all mean vectors, i.e. dot product of a given vector with all means of cluster. The dot product values written give us the hashed vector of the data vector. As projections on mean vectors are different for every vector, the hashed vector gives us all the characteristics of the original vector and is of shorter length. 
+					
+						<!-- Stop edit here -->
+
+					</div>
+				</div>
+
+
+
+
+				
 			</div>
 
 			<div class="section">
-				<div class="heading">3. Experiments &amp; Results</div>
+				<div class="heading" id="results">3. Experimental Results, Project Code and Discussions &amp; Results</div>
 				<div class="subsection">
 					<div class="heading">3.1 Dataset Description</div>
 					<div class="text">
 
 						<!-- Start edit here  -->
-						To be updated.
+						Initially we took a video in formats like mkv, mp4. Then after executing Face Detection and tracking code, three CSV (comma-separated values) files are generated . 
+<br> 
+						<a href="https://drive.google.com/open?id=1NPuC4JH1X_JJny45rgIy18XJteIuFQXT">face.csv :</a> This contains the pixel values (0-255) of all the detected faces. Since we resized our Black and White detected face into 64*64 dimension (row major matrix) and then converted into one dimensional row matrix, each row represents one face. This 1 x 4096 dimension vector of each face is our feature vector.
+<br>
+  <a href="https://drive.google.com/open?id=1a3pe2eL-sCe3NS_LfEwIOQLo50fIwpTh">track.csv :</a>  This contains number of faces detected in each track. This helps us in the initialization of clusters. 
+
+<br><a href="https://drive.google.com/open?id=17UBzFeDVmbTvc4sFgon3_ix3E-w_l-kr">trackDetails.csv :</a>   This contains the starting and ending frame numbers of each track. This helps us in printing timestamps. 
+
+<br> <br> All the detected faces of different persons in different tracks are stored in separate folders. <a href="https://drive.google.com/open?id=1hqkMHlXNKNoMLeVn56KXEYGkxyajEvpP">(Link)</a>
+<br> <br>  After performing Spherical K-Means Clustering on the dataset obtained from the detection and tracking code, three CSV files are generated.
+<br>  <a href="https://drive.google.com/open?id=14QY4T00vYR45oUOZU_kMGi-mBMihnuHu">meanv.csv :</a> It contains mean vectors of all the clusters. Here each row represents one mean vector.
+<br>  <a href="https://drive.google.com/open?id=1FbHw1VDoYYDy952EI4w5aTzn0svmwSmN">hashed.csv :</a>  It contains hashed vectors of each detected face. (Hashed vectors are obtained by taking dot product of each image with mean vector of each cluster).Each row represents one image but the dimension obtained here will be different and it will depend on the number of clusters. Suppose we took ‘n’ clusters then each image dimension will be 1 x n . Total dimension of this file will be equal to (number of images x number of clusters )
+<br>  <a href="https://drive.google.com/open?id=1bCYBdZP_9o3E34A0DmGiM_5uSMZ3KZ9Y">hash_mean.csv :</a> This contains the mean vectors of hashed vectors of each track.  The dimension of this csv will be (number of tracks x number of clusters)
+<br> <br> The clustered face images are  stored in separate folders where each folder denotes a single cluster and it contains all the faces belong to that cluster. <a href="https://drive.google.com/open?id=1Rqzl6RqA8V2r0ZOIXJby4AxU_R8gO_tU">(link)</a>  <br> <br> <a href="https://drive.google.com/drive/folders/1BDKtDrEGl1yl89HqEjTLyn1M_Fw-RSgJ?usp=sharing" target="_blank">Click here for all datasets</a>
 						<!-- Stop edit here -->
 
 					</div>
@@ -149,7 +237,28 @@
 					<div class="text">
 
 						<!-- Start edit here  -->
-						To be updated.
+						<br> We performed two types of Spherical K-Means clustering.  
+<br> <br> In the first spherical clustering, we gave random initialization to face vectors i.e. levels are given to face vectors randomly at the first step and the remaining process continues. <a href="https://drive.google.com/open?id=1ZrHSRn8qRb65KWl1ePUdgnPpMlUx_BQB"> Results</a>  
+<br><br>In the second spherical clustering type, initialization of levels is done according to folders created i.e. after detection and tracking, various folders of tracked faces are created. We initialized the first track as first level, second one as second level and so on. <a href="https://drive.google.com/open?id=1YqBJvW-E0mMgbNvOaFuIGLCfVmI1p6NQ"> Results</a>
+<br> <br> In random initialization clustering, the number of clusters are 10 percent of the total number of tracks while in the other type of clustering, number of clusters are equal to number of tracks.
+
+
+
+						<!-- Stop edit here -->
+
+					</div>
+				</div>
+				<div class="subsection">
+					<div class="heading">3.3 Codes</div>
+					<div class="text">
+
+						<!-- Start edit here  -->
+						<br>  Face Detection and Tracking: <a href="https://github.com/aakhil007/facesearch/blob/master/Codes/detect.py"> Click here</a>
+						<br> <br> Spherical Clustering with Random Initialization: <a href="https://github.com/aakhil007/facesearch/blob/master/Codes/sphericalKmeans_ran_ini.py"> Click here</a>	
+						<br> <br> Spherical Clustering using tracks as inital levels: <a href="https://github.com/aakhil007/facesearch/blob/master/Codes/sphericalKmeans.py"> Click here</a>	
+						<br> <br> For calculating dot product and creating adjacency matrix: <a href="https://github.com/aakhil007/facesearch/blob/master/Codes/dot.py">Click here</a>
+						<br> <br> <a href="https://github.com/aakhil007/facesearch/blob/master/Codes" target="_blank">Click here for all codes</a>
+
 						<!-- Stop edit here -->
 
 					</div>
@@ -157,13 +266,22 @@
 			</div>
 
 			<div class="section">
-				<div class="heading">4. Conclusions</div>
+				<div class="heading" id="summary">4. Conclusions</div>
 				<div class="subsection">
 					<div class="heading">4.1 Summary</div>
 					<div class="text">
 
 						<!-- Start edit here  -->
-						To be updated.
+						 We have detected and tracked the faces in a video input and created folders of all the tracks. We have then executed two different clustering algorithms on the face images detected. Both gave results which are quite similar and have good efficiency. We then hashed the face vectors and found hashed mean vectors for each cluster. 
+Later, we found dot products of each unit mean vector with the other unit mean vectors. If this value is greater than 0.6, it means that both clusters are similar i.e. have same faces. We used adjacency matrix to draw the graph showing similar clusters. <br> <br>
+
+					<div class="image" style="margin: auto;width: 90%">
+
+					<!-- Start edit here  -->						
+					<img src="./images/graph.png" alt="This text displays when the image is unavailable" width="60%" height="auto"> <br>
+					<!-- Stop edit here -->
+
+					</div>
 						<!-- Stop edit here -->
 
 					</div>
@@ -173,12 +291,26 @@
 					<div class="text">
 
 						<!-- Start edit here  -->
-						To be updated.
+						Other methods like the Bhattacharya distance etc, can be used to perform better correlation. Number of clusters which can be created in spherical K-means clustering can be increased thus also increasing the characteristic features in hashed vectors. Efficiency of tracking can also be increased.
+
 						<!-- Stop edit here -->
 
 					</div>
 				</div>
 			</div>
+
+			<div class="section">
+				<div class="heading">5. References</div>
+				<div class="text" style="font-size: 14px;">
+
+					<!-- Start edit here  -->
+					<p id="1"><a href="https://link.springer.com/content/pdf/10.1007%2F978-3-642-27355-1_46.pdf" target="_blank">[1]</a> Nipun Pande, Mayank Jain, Dhawal Kapil, and Prithwijit Guha, The Video Facebook</p><br>
+					<p id="2"><a href="http://web.cs.ucdavis.edu/~filkov/classes/234-S08/secure/clustering.pdf" target="_blank">[2]</a> Clustering Multi Dimensional Data</p><br>
+					<p id="2"><a href="http://graphonline.ru/en/?graph=huOcKayFQURFZJzv" target="_blank">[2]</a> For plotting the graphs using adjacency matrix</p><br>
+					
+				</div>
+			</div>
+
 
 		</div>
 	
